@@ -59,22 +59,36 @@ const DiagnosisHistory = ({ history }) => {
   const chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
+    layout: {
+        padding: {
+            top: 20
+        }
+    },
     plugins: {
       legend: { display: false },
       tooltip: {
-        backgroundColor: '#07263E',
-        titleFont: { family: 'Manrope', weight: 'bold' },
-        bodyFont: { family: 'Manrope' },
+        backgroundColor: '#072635',
+        padding: 12,
+        titleFont: { family: 'Manrope', size: 14, weight: 'bold' },
+        bodyFont: { family: 'Manrope', size: 14 },
+        cornerRadius: 8,
+        displayColors: false
       },
     },
     scales: {
       y: {
+        min: 60,
+        max: 180,
         grid: { color: '#EAEAEA', drawBorder: false },
-        ticks: { font: { family: 'Manrope' }, color: '#07263E' },
+        ticks: { 
+            stepSize: 20,
+            font: { family: 'Manrope', size: 12 }, 
+            color: '#072635' 
+        },
       },
       x: {
         grid: { display: false },
-        ticks: { font: { family: 'Manrope' }, color: '#07263E' },
+        ticks: { font: { family: 'Manrope', size: 12 }, color: '#072635' },
       },
     },
   };

@@ -21,7 +21,7 @@ const ProfileSidebar = ({ patient }) => {
             value={formatDate(patient.date_of_birth)}
           />
           <InfoRow 
-            icon="/assets/FemaleIcon.svg"
+            icon={patient.gender === 'Female' ? "/assets/FemaleIcon.svg" : "/assets/MaleIcon.svg"}
             label="Gender"
             value={patient.gender}
           />
